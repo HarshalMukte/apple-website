@@ -421,7 +421,7 @@
         .image {
           width: 100%;
           min-height: 100%;
-          overflow-x: hidden;
+          overflow: hidden;
           @media screen and (max-width:800px) {
             padding: 20px 0px 20px 50px;
           }
