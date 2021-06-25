@@ -593,7 +593,7 @@
 .container section#banner .image {
   width: 100%;
   min-height: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 800px) {
