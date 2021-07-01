@@ -9,7 +9,7 @@ cross.addEventListener("click",() => {
   active();
 })
 navLinks.addEventListener("click",() =>{
-    navLinks.classList.remove("active");
+   active();
 });
 function active(){
   navLinks.classList.toggle("active");
