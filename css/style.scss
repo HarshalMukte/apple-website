@@ -6,12 +6,14 @@
     scroll-behavior: smooth;
   }
   .container {
-    max-width: 1260px;
-    
     width: 100%;
     height: auto;
     font-family: "poppins", sans-serif;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   
     button {
       width: 220px;
@@ -49,7 +51,7 @@
 
       @media screen and (max-width:500px) {
         flex-direction: column;
-        padding: 40px 10px 20;
+        padding: 40px 10px 20px;
       }
   
       &::before {
@@ -98,9 +100,18 @@
             @media screen and (max-width:790px) {
               display: inline-block;
             }
-            
+            &#menu-icon{
+              display: inline-block;
+            }
+            &#menu-icon.deActive{
+              display: none;
+            }
+
             &#cross-icon{
               display: none;
+              &.active{
+                display: inline-block;
+              }
             }
           }
   
@@ -161,20 +172,41 @@
       width: 100%;
       min-height: 100vh;
       position: relative;
-  
+      // padding-left: 100px;
+      // padding-right: 100px;
+      padding: 100px 80px;
+
+      @media screen and (max-width:850px) {
+        padding: 80px 70px;
+      }
+      @media screen and (max-width:500px) {
+        padding: 70px 60px;
+      }
+      @media screen and (max-width:450px) {
+        padding: 60px 50px;
+      }
+      @media screen and (max-width:400px) {
+        padding: 50px 40px;
+      }
+   
+      p{
+        text-align: justify;
+      }
+
       &#home {
-        padding: 0px 50px;
+        padding-top: 0px;
+        padding-bottom: 0px;
         display: flex;
         overflow-x: hidden;
         
         
 
-        @media screen and (max-width:700px) {
+        @media screen and (max-width:720px) {
           flex-direction: column;
-          padding: 0px 40px;
+          // padding: 0px 40px;
         }  
         @media screen and (max-width:500px) {
-          padding: 0 10px;
+          // padding: 0 10px;
         }
 
 
@@ -191,9 +223,10 @@
           @media  (max-width:950px) {
                 left: -40%;
           }
-          @media screen and (max-width:700px) {
+          @media screen and (max-width:720px) {
             left: 0;
             transform: skew(0deg);
+            height: 100%;
           }
   
         }
@@ -202,20 +235,27 @@
           width: 100%;
           display: flex;
           flex-direction: column;
-          align-items: center;
           justify-content: center;
           color: #fff;
-
+          position: relative;
+ 
+          @media screen and (max-width:720px) {
+            height: 100%;
+          }
         
           h1 {
             width: 80%;
             font-size: 60px;
             font-weight: 700;
   
-            @media  (max-width:850px) {
+            @media  (max-width:895px) {
                 font-size: 50px;
                 padding-top: 15px;
             }
+            @media  (max-width:750px) {
+              font-size: 45px;
+          }
+
             @media screen and (max-width:600px) {
               font-size: 40px;
             }
@@ -243,9 +283,9 @@
           justify-content: center;
         
           img {
-            width: 80%;
+            width: 85%;
             @media screen and (max-width:700px) {
-              width: 70%;
+              width: 80%;
               height: 100%;
             }
     
@@ -253,28 +293,32 @@
         }
         button {
           position: absolute;
+          margin-bottom: 10px;
+          left: 0;
           bottom: 0;
-          left: 5%;
 
-          @media screen and (max-width:700px) {
-            left: 0;
+          @media screen and (max-width:720px) {
+            background-color: #639ebe;
+            position: static;
+            padding-bottom:10px ;
+
           }
   
         }
       }
   
       &#about {
-        padding: 90px 50px;
+        // padding: 90px 50px;
         display: flex;
 
         
   
         @media screen and (max-width:820px) {
           flex-direction: column;
-          padding: 50px 30px;
+          // padding: 50px 30px;
         }
         @media screen and (max-width:600px) {
-          padding: 50px 20px 30px;
+          // padding: 50px 20px 30px;
         }
 
         .content {
@@ -295,7 +339,7 @@
           }
           p {
             padding: 20px 0;
-            width: 80%;
+            width: 90%;
             font-weight: 300;
             font-size: 18px;
             line-height: 28px;
@@ -312,15 +356,13 @@
           justify-content: center;
           img {
             width: 80%;
-            @media screen and (max-width:820px) {
-              width: 70%;
-            }
+          
           }
         }
       }
   
       &#our-fruits {
-        padding: 90px 50px;
+        // padding: 90px 50px;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 4fr;
@@ -329,7 +371,7 @@
 
         @media screen and (max-width:900px) {
           grid-template-rows: 1fr 2fr;
-          padding: 80px 50px;
+          // padding: 80px 50px;
         }
 
         @media screen and (max-width:750px) {
@@ -337,7 +379,7 @@
           flex-direction: column;
           align-items: center;
           justify-content: center;
-          padding: 40px 30px;
+          // padding: 40px 30px;
         }
   
         .heading {
@@ -373,23 +415,32 @@
       }
       &#banner {
         display: flex;
+        padding: 0;
 
         @media screen and (max-width:800px) {
           flex-direction: column;
         }
+        
   
         .content {
           width: 100%;
           max-height: 100%;
-          padding: 100px 50px;
+          padding: 100px 20px 100px 80px;
           display: flex;
           flex-direction: column;
 
-          @media screen and (max-width:800px) {
-            padding: 50px 30px;
+          @media screen and (max-width:850px) {
+            // padding: 50px 30px;
+            padding: 80px 70px;
           }
-          @media screen and (max-width:350px) {
-            padding: 30px 20px;
+          @media screen and (max-width:500px) {
+            padding: 70px 60px;
+          }
+          @media screen and (max-width:450px) {
+            padding: 60px 50px;
+          }
+          @media screen and (max-width:450px) {
+            padding: 50px 45px;
           }
 
           h2 {
@@ -433,7 +484,6 @@
         }
       }
       &#our-blog {
-        padding: 10px 50px;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 4fr;
@@ -443,17 +493,8 @@
         @media screen and (max-width:800px) {
           display: flex;
           flex-direction: column;
-          padding: 40px 125px;
         }
-        @media screen and (max-width:600px) {
-          padding: 30px 80px;
-        }
-        @media screen and (max-width:500px) {
-          padding: 30px 50px;
-        }
-        @media screen and (max-width:370px) {
-          padding: 30px 30px;
-        }
+     
 
         .heading {
           width: 100%;
@@ -474,7 +515,7 @@
           position: relative;
 
           @media screen and (max-width:800px) {
-            padding: 30px 0px;
+            padding: 30px 00px;
           }
           @media screen and (max-width:600px) {
             padding: 20px 0px;
@@ -526,20 +567,23 @@
         }
       }
       &#contact-us {
-        padding: 50px 50px;
+        // padding: 50px 50px;
         display: flex;
 
         @media screen and (max-width:800px) {
           flex-direction: column;
-          padding: 40px 20px; 
+          // padding: 40px 20px; 
         }
         @media screen and (max-width:950px) {
-          padding: 40px 30px;
+          // padding: 40px 30px;
         }
   
         .image {
           width: 100%;
           height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
           overflow: hidden;
   
           img {
@@ -555,8 +599,7 @@
             min-height: 100%;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-  
+            
             h2 {
               font-size: 45px;
               font-weight: 500;
@@ -575,6 +618,7 @@
             }
             input,
             textarea {
+              margin: 10px 0;
               background-color: #282e40;
               display: block;
               width: 100%;
@@ -590,6 +634,7 @@
               min-height: 100px;
             }
             button {
+              margin-top: 10px;
               background-color: #639ebe;
 
               @media screen and (max-width:800px) {

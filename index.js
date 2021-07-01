@@ -1,13 +1,28 @@
 const menu = document.getElementById("menu-icon");
-const cross = document.getElementById("cross");
+const cross = document.getElementById("cross-icon");
 const navLinks = document.querySelector("nav ul");
 
 menu.addEventListener("click" ,() => {
-    navLinks.classList.toggle("active");
+   active();
+});
+cross.addEventListener("click",() => {
+  active();
 })
 navLinks.addEventListener("click",() =>{
     navLinks.classList.remove("active");
-})
+});
+function active(){
+  navLinks.classList.toggle("active");
+    cross.classList.toggle("active");
+    menu.classList.toggle("deActive");
+}
+
+// code for vanishing the navbar on taping outside the div 
+document.body.addEventListener("mouseup",(event) => {
+  if (event.target = navLinks.classList.contains("active")) {
+    active();
+  }
+});
 
 
 // for up-arrow effect

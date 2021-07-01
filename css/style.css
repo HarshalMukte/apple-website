@@ -7,11 +7,23 @@
 }
 
 .container {
-  max-width: 1260px;
   width: 100%;
   height: auto;
   font-family: "poppins", sans-serif;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .container button {
@@ -64,7 +76,7 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding: 40px 10px 20;
+    padding: 40px 10px 20px;
   }
 }
 
@@ -136,8 +148,20 @@
   }
 }
 
+.container header nav i#menu-icon {
+  display: inline-block;
+}
+
+.container header nav i#menu-icon.deActive {
+  display: none;
+}
+
 .container header nav i#cross-icon {
   display: none;
+}
+
+.container header nav i#cross-icon.active {
+  display: inline-block;
 }
 
 @media (max-width: 790px) {
@@ -206,29 +230,52 @@
   width: 100%;
   min-height: 100vh;
   position: relative;
+  padding: 100px 80px;
+}
+
+@media screen and (max-width: 850px) {
+  .container section {
+    padding: 80px 70px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container section {
+    padding: 70px 60px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .container section {
+    padding: 60px 50px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .container section {
+    padding: 50px 40px;
+  }
+}
+
+.container section p {
+  text-align: justify;
 }
 
 .container section#home {
-  padding: 0px 50px;
+  padding-top: 0px;
+  padding-bottom: 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   overflow-x: hidden;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 720px) {
   .container section#home {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding: 0px 40px;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .container section#home {
-    padding: 0 10px;
   }
 }
 
@@ -250,11 +297,12 @@
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 720px) {
   .container section#home::before {
     left: 0;
     -webkit-transform: skew(0deg);
             transform: skew(0deg);
+    height: 100%;
   }
 }
 
@@ -267,13 +315,17 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   color: #fff;
+  position: relative;
+}
+
+@media screen and (max-width: 720px) {
+  .container section#home .content {
+    height: 100%;
+  }
 }
 
 .container section#home .content h1 {
@@ -282,10 +334,16 @@
   font-weight: 700;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 895px) {
   .container section#home .content h1 {
     font-size: 50px;
     padding-top: 15px;
+  }
+}
+
+@media (max-width: 750px) {
+  .container section#home .content h1 {
+    font-size: 45px;
   }
 }
 
@@ -327,30 +385,32 @@
 }
 
 .container section#home .image img {
-  width: 80%;
+  width: 85%;
 }
 
 @media screen and (max-width: 700px) {
   .container section#home .image img {
-    width: 70%;
+    width: 80%;
     height: 100%;
   }
 }
 
 .container section#home button {
   position: absolute;
+  margin-bottom: 10px;
+  left: 0;
   bottom: 0;
-  left: 5%;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 720px) {
   .container section#home button {
-    left: 0;
+    background-color: #639ebe;
+    position: static;
+    padding-bottom: 10px;
   }
 }
 
 .container section#about {
-  padding: 90px 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -362,13 +422,6 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding: 50px 30px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .container section#about {
-    padding: 50px 20px 30px;
   }
 }
 
@@ -404,7 +457,7 @@
 
 .container section#about .content p {
   padding: 20px 0;
-  width: 80%;
+  width: 90%;
   font-weight: 300;
   font-size: 18px;
   line-height: 28px;
@@ -434,14 +487,7 @@
   width: 80%;
 }
 
-@media screen and (max-width: 820px) {
-  .container section#about .image img {
-    width: 70%;
-  }
-}
-
 .container section#our-fruits {
-  padding: 90px 50px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
@@ -456,7 +502,6 @@
   .container section#our-fruits {
     -ms-grid-rows: 1fr 2fr;
         grid-template-rows: 1fr 2fr;
-    padding: 80px 50px;
   }
 }
 
@@ -475,7 +520,6 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    padding: 40px 30px;
   }
 }
 
@@ -519,6 +563,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 0;
 }
 
 @media screen and (max-width: 800px) {
@@ -533,7 +578,7 @@
 .container section#banner .content {
   width: 100%;
   max-height: 100%;
-  padding: 100px 50px;
+  padding: 100px 20px 100px 80px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -543,15 +588,27 @@
           flex-direction: column;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 850px) {
   .container section#banner .content {
-    padding: 50px 30px;
+    padding: 80px 70px;
   }
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 500px) {
   .container section#banner .content {
-    padding: 30px 20px;
+    padding: 70px 60px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .container section#banner .content {
+    padding: 60px 50px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .container section#banner .content {
+    padding: 50px 45px;
   }
 }
 
@@ -610,7 +667,6 @@
 }
 
 .container section#our-blog {
-  padding: 10px 50px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
@@ -631,25 +687,6 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding: 40px 125px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .container section#our-blog {
-    padding: 30px 80px;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .container section#our-blog {
-    padding: 30px 50px;
-  }
-}
-
-@media screen and (max-width: 370px) {
-  .container section#our-blog {
-    padding: 30px 30px;
   }
 }
 
@@ -681,7 +718,7 @@
 
 @media screen and (max-width: 800px) {
   .container section#our-blog .card {
-    padding: 30px 0px;
+    padding: 30px 00px;
   }
 }
 
@@ -736,7 +773,6 @@
 }
 
 .container section#contact-us {
-  padding: 50px 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -748,19 +784,21 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding: 40px 20px;
-  }
-}
-
-@media screen and (max-width: 950px) {
-  .container section#contact-us {
-    padding: 40px 30px;
   }
 }
 
 .container section#contact-us .image {
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   overflow: hidden;
 }
 
@@ -783,9 +821,6 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .container section#contact-us .form form h2 {
@@ -814,6 +849,7 @@
 
 .container section#contact-us .form form input,
 .container section#contact-us .form form textarea {
+  margin: 10px 0;
   background-color: #282e40;
   display: block;
   width: 100%;
@@ -834,6 +870,7 @@
 }
 
 .container section#contact-us .form form button {
+  margin-top: 10px;
   background-color: #639ebe;
 }
 
