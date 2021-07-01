@@ -18,11 +18,11 @@ function active(){
 }
 
 // code for vanishing the navbar on taping outside the div 
-document.body.addEventListener("mouseup",(event) => {
-  if (event.target = navLinks.classList.contains("active")) {
-    active();
-  }
-});
+// document.body.addEventListener("mouseup",(event) => {
+//   if (event.target = cross.classList.contains("active")) {
+//     active();
+//   }
+// });
 
 
 // for up-arrow effect
