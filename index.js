@@ -1,3 +1,22 @@
+// loader js
+const loader = document.getElementById("loader");
+const container = document.querySelector(".container");
+
+function loading(){
+  document.body.scrollTop = 0; 
+  document.documentElement.scrollTop = 0;
+
+  
+  
+  setTimeout(() => {
+    loader.style.opacity = "0";
+    container.classList.remove("hide");
+   loader.style.display = "none";
+  },2000);
+}
+
+
+
 const menu = document.getElementById("menu-icon");
 const cross = document.getElementById("cross-icon");
 const navLinks = document.querySelector("nav ul");
@@ -17,12 +36,7 @@ function active(){
     menu.classList.toggle("deActive");
 }
 
-// code for vanishing the navbar on taping outside the div 
-// document.body.addEventListener("mouseup",(event) => {
-//   if (event.target = cross.classList.contains("active")) {
-//     active();
-//   }
-// });
+
 
 
 // for up-arrow effect
@@ -33,10 +47,12 @@ btn.addEventListener('click', () =>{
 });
 
 window.onscroll = () =>{
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
         btn.style.display = "block";
         btn.style.opacity = "1";
       } else {
         btn.style.display = "none";
       }
 }
+
+

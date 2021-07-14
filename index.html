@@ -1,162 +1,212 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Apple website</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
 
     <!-- for favicon -->
-    <link rel="icon" type="image/png" href="images/favicon.png"/>
+    <link rel="icon" type="image/png" href="images/favicon.png" />
 
     <!-- fot fontAwesome cdn -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-<body>
-    <div class="container">
+    <!-- swiper js css -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    
+  </head>
 
-        <header>
-            <div class="logo">
-                <img src="images/logo.png"alt=""/>
-            </div>
-            
-            
-            <nav class="navigation">
+  <body onload="loading()">
 
-                <i class="fas fa-bars" id="menu-icon"></i>
-                <i class="fas fa-times"id="cross-icon"></i>   
-                <ul>
-                    <li><a class="active" href="#home">Home</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#our-fruits">Fruits</a></li>
-                    <li><a href="#our-blog">Blog</a></li>
-                    <li><a href="#contact-us">Contact Us</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <section id="home">
-            <div class="content">
-                <h1>
-                    <span>Best</span>
-                    Fresh Red Apple
-                </h1>
-                <p>
-                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-                    classical Latin literature
-                </p>
-                <button>Buy Now</button>
-            </div>
-
-            <div class="image">
-                <img src="images/image-1.png" alt="">
-            </div>
-        </section>
-
-        <section id="about">
-            <div class="image">
-                <img src="images/image-2.png" alt="">
-            </div>
-            <div class="content">
-                <h2>About our shop</h2>
-                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-                    classical Latin literature. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                    ut aliquip exipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-                <button>Read More</button>
-            </div>
-        </section>
-
-        <section id="our-fruits">
-            <div class="heading">
-                <h2>Our Fruits</h2>
-            </div>
-            <div class="card card1">
-                <img src="images/grapes.png" alt="grapes">
-                <h3>Black Grapes</h3>
-                <p>Fresh Fruit</p>
-            </div>
-            <div class="card card2">
-                <img src="images/pineapple.png" alt="pineapple">
-                <h3>Pineapple</h3>
-                <p>Fresh Fruit</p>
-            </div>
-            <div class="card card3">
-                <img src="images/banana.png" alt="banana">
-                <h3>Banana</h3>
-                <p>Fresh Fruit</p>
-            </div>
-
-        </section>
-
-        <section id="banner">
-            <div class="content">
-                <h2>Fresh Lemon</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing el sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercita tion ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure doloreprehenderin</p>
-                <button>Read More</button>
-            </div>
-            <div class="image">
-                <img src="images/image-3.png" alt="">
-            </div>
-        </section>
-
-        <section id="our-blog">
-            <div class="heading">
-                <h2>Our Blog</h2>
-            </div>
-            <div class="card card1">
-                <img src="images/blog1.png" alt="grapes">
-                <div class="content">
-                    <h5>Post by David Mark 27/07/2045</h5>
-                    <p> sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniadolor..</p>
-                </div>
-            </div>
-            <div class="card card2">
-                <img src="images/blog2.png" alt="grapes">
-                <div class="content">
-                    <h5>Post by David Mark 27/07/2045</h5>
-                    <p> sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniadolor..</p>
-                </div>
-            </div>
-            <div class="card card3">
-                <img src="images/blog3.png" alt="grapes">
-                <div class="content">
-                    <h5>Post by David Mark 27/07/2045</h5>
-                    <p> sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniadolor..</p>
-                </div>
-            </div>
-
-        </section>
-
-        <section id="contact-us">
-            <div class="image">
-                <img src="images/contact-us.jpg" alt="contact-us">
-            </div>
-            <div class="form">
-                <form action="">
-                    <h2>Request a <span>Call Back</span></h2>
-                    <input type="text" placeholder="Your Name">
-                    <input type="email" placeholder="Emal">
-                    <input type="tel" placeholder="Phone">
-                    <textarea name="message" id="message"></textarea>
-                    <button>Send</button>
-                </form>
-            </div>
-        </section>
-
-        <!-- for up-arrow -->
-        <div class="up-arrow" id="btn"><i class="fas fa-arrow-up"></i></div>
-        
+    <!-- loader -->
+    <div id="loader">
+      <img src="images/loader.gif" alt="loader">
     </div>
 
-<script src="index.js"></script>
-</body>
+    <div class="container hide">
 
+      <header>
+        <div class="logo">
+          <img src="images/logo.png" alt="" />
+        </div>
+
+        <nav class="navigation">
+          <i class="fas fa-bars" id="menu-icon"></i>
+          <i class="fas fa-times" id="cross-icon"></i>
+          <ul>
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#our-fruits">Fruits</a></li>
+            <li><a href="#our-blog">Blog</a></li>
+            <li><a href="#contact-us">Contact Us</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <section id="home">
+        <div class="content">
+          <h1>
+            <span>Best</span>
+            Fresh Red Apple
+          </h1>
+          <p>
+            Contrary to popular belief, Lorem Ipsum is not simply random text.
+            It has roots in a piece of classical Latin literature
+          </p>
+          <button>Buy Now</button>
+        </div>
+
+        <div class="image">
+          <img src="images/image-1.png" alt="" />
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="image">
+          <img src="images/image-2.jpg" alt="" />
+        </div>
+        <div class="content">
+          <h2>About our shop</h2>
+          <p>
+            Contrary to popular belief, Lorem Ipsum is not simply random text.
+            It has roots in a piece of classical Latin literature. Ut enim ad
+            minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip exipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <button>Read More</button>
+        </div>
+        <span><img src="images/gif-1.gif" alt="gif-1"></span>
+      </section>
+
+      <section  id="our-fruits">  
+        <div class="heading">
+          <h2>Our Fruits</h2>
+        </div>
+        <div class="swiper-container cards">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide card"><img src="images/grapes.png" alt="fruit"> <h3>Black Grapes</h3>
+              <p>Fresh Fruit</p></div>
+            <div class="swiper-slide card"><img src="images/pineapple.png" alt="fruit"> <h3>Pineapple</h3>
+              <p>Fresh Fruit</p></div>
+            <div class="swiper-slide card"><img src="images/banana.png" alt="fruit"> <h3>Banana</h3>
+              <p>Fresh Fruit</p></div>
+            <div class="swiper-slide card"><img src="images/orange.jpg" alt="fruit"> <h3>Orange</h3>
+              <p>Fresh Fruit</p></div>
+              <div class="swiper-slide card"><img src="images/apple.jpg" alt="fruit"> <h3>Apple</h3>
+                <p>Fresh Fruit</p></div>
+          </div>
+
+          <!-- Add Arrows -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          </div>
+      </section>
+
+      <section id="banner">
+        <div class="content">
+          <h2>Fresh Lemon</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing el sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+            veniam, quis nostrud exercita tion ullamco laboris nisi ut aliquip
+            ex ea commodo consequat. Duis aute irure doloreprehenderin
+          </p>
+          <button>Read More</button>
+        </div>
+        <div class="image">
+          <img src="images/lemon.jpg" alt="" />
+        </div>
+        <span><img src="images/gif-2.gif" alt="gif-2"></span>
+      </section>
+
+      <section id="our-blog">
+        <div class="heading">
+          <h2>Our Blog</h2>
+        </div>
+        <div class="card card1">
+          <img src="images/blog1.png" alt="grapes" />
+          <div class="content">
+            <h5>Post by David Mark 27/07/2045</h5>
+            <p>
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Ut enim ad minim veniadolor..
+            </p>
+          </div>
+        </div>
+        <div class="card card2">
+          <img src="images/blog2.png" alt="grapes" />
+          <div class="content">
+            <h5>Post by David Mark 27/07/2045</h5>
+            <p>
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Ut enim ad minim veniadolor..
+            </p>
+          </div>
+        </div>
+        <div class="card card3">
+          <img src="images/blog3.png" alt="grapes" />
+          <div class="content">
+            <h5>Post by David Mark 27/07/2045</h5>
+            <p>
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Ut enim ad minim veniadolor..
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact-us">
+        <div class="image">
+          <img src="images/contact-us.jpg" alt="contact-us" />
+        </div>
+        <div class="form">
+          <form action="">
+            <h2>Request a <span>Call Back</span></h2>
+            <input type="text" placeholder="Your Name" />
+            <input type="email" placeholder="Emal" />
+            <input type="tel" placeholder="Phone" />
+            <textarea name="message" id="message" placeholder="Message"></textarea>
+            <button>Send</button>
+          </form>
+        </div>
+      </section>
+
+      <div class="up-arrow" id="btn">
+        <i class="fas fa-arrow-up"></i>
+      </div>
+    
+
+    <script src="index.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
+    <script>
+      var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 1,
+      centeredSlides: false,
+      slidesPerGroupSkip: 1,
+      spaceBetween: 30,
+      loop: true,
+      autoplay: {delay: 3000, disableOnInteraction: false,},
+      speed: 800,
+      keyboard: { enabled: true },
+      breakpoints: { 769: { slidesPerView: 2, slidesPerGroup: 2 } , 1000: { slidesPerView: 3, slidesPerGroup: 2 } },
+      scrollbar: { el: '.swiper-scrollbar' },
+      navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+    });
+    </script>
+
+  </body>
 </html>
