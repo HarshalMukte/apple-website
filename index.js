@@ -6,8 +6,6 @@ function loading(){
   document.body.scrollTop = 0; 
   document.documentElement.scrollTop = 0;
 
-  
-  
   setTimeout(() => {
     loader.style.opacity = "0";
     container.classList.remove("hide");
@@ -16,7 +14,7 @@ function loading(){
 }
 
 
-
+// menu toggle
 const menu = document.getElementById("menu-icon");
 const cross = document.getElementById("cross-icon");
 const navLinks = document.querySelector("nav ul");
