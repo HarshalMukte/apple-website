@@ -288,6 +288,10 @@
           flex-direction: column;
           color: #fff;
           position: relative;
+          margin-top: 50px;
+          @media screen and (max-width:900px) {
+            margin-top: 20px;
+          }
  
           @media screen and (max-width:720px) {
             height: 100%;
