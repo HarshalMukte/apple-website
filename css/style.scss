@@ -489,6 +489,7 @@
         .cards{
           width: 100%;
           display: flex;
+           overflow: hidden;
           .card {
              min-width: 250px;
              width: 300px;
